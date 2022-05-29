@@ -52,11 +52,11 @@ export default {
     display: flex;
     justify-content: space-around;
     background-color:#101010;
-    padding: 1%;
 }
 
 .header h1{
     font-weight: 500;
+    margin: 8px;
 }
 
 .header h1  a{
@@ -106,7 +106,7 @@ export default {
     }
 
     .header h1{
-        margin: 10px;
+        margin: 8px;
         text-align: left;
     }
 

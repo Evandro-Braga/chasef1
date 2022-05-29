@@ -35,19 +35,4 @@ export default {
 }
 </script>
 
-<style>
-.schedule{
-    min-height: 100vh;
-    padding: 1%;
-}
-
-.schedule h2{
-    margin: 30px 0 30px 0;
-}
-
-@media (max-width: 700px){
-    .schedule{
-        margin-left: 0;
-    }
-}
-</style>
+<style src="./Style.css" scoped></style>

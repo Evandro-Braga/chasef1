@@ -32,19 +32,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.drivers {
-  min-height: 100vh;
-  padding: 1%;
-}
-
-.drivers h2 {
-  margin: 30px 0 30px 0;
-}
-
-@media (max-width: 700px) {
-  .drivers {
-    margin-left: 0;
-  }
-}
-</style>
+<style src="./Style.css" scoped></style>

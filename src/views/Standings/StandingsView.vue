@@ -45,23 +45,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.standings {
-    min-height: 100vh;
-    padding: 1%;
-}
-
-.standings h2 {
-    margin-top: 30px;
-}
-
-.standings h3{
-    margin: 30px 0 15px 0;
-}
-
-@media (max-width: 700px) {
-  .standings {
-    margin-left: 0;
-  }
-}
-</style>
+<style src="./Style.css" scoped></style>

@@ -22,26 +22,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.home {
-  height: 130vh;
-}
-
-.homeTitle {
-  padding: 2%;
-}
-
-.homeImage {
-  background-image: url('@/images/F1CALENDARIO.jpg');
-  background-size: cover;
-  min-width: 100%;
-  height: 700px;
-  margin: auto;
-}
-
-@media (max-width: 700px) {
-  .home {
-    margin-left: 0;
-  }
-}
-</style>
+<style src="./Style.css" scoped></style>
