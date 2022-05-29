@@ -10,13 +10,12 @@
 </template>
 
 <script>
-import HeaderComponent from '@/components/HeaderComponent.vue'
-import ScheduleList from '@/components/ScheduleListComponent.vue'
+import HeaderComponent from '@/components/Header/Header.vue';
+import ScheduleList from '@/components/ScheduleList/ScheduleList.vue'
 import api from '@/services/api'
 
 export default {
     name: 'ScheduleView',
-
     components: {HeaderComponent, ScheduleList},
 
     data(){

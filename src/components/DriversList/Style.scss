@@ -1,0 +1,15 @@
+@import '@/assets/scss/colors';
+
+.list {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    color: $textColor;
+    text-align: left;
+}
+
+table a {
+    color: skyblue;
+}

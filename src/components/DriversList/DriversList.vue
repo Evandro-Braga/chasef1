@@ -29,7 +29,7 @@
 
 <script>
 export default {
-    name: 'DriversListComponent',
+    name: 'DriversList',
 
     props: {
         drivers: Object
@@ -37,20 +37,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '@/assets/scss/colors';
-
-.list{
-    width: 100%;
-}
-
-table{
-    width: 100%;
-    color: $textColor;
-    text-align: left;
-}
-
-table a{
-    color: skyblue;
-}
-</style>
+<style src="./Style.scss" lang="scss" scoped></style>

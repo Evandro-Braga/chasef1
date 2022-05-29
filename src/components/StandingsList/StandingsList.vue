@@ -30,7 +30,7 @@
 <script>
 
 export default {
-    name: 'StandingsListComponent',
+    name: 'StandingsList',
 
     props: {
         standings: Object
@@ -38,16 +38,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '@/assets/scss/colors';
-
-.standings{
-    width: 100%;
-}
-
-.standings table{
-    width: 80%;
-    color: $textColor;
-    text-align: left;
-}
-</style>
+<style src="./Style.scss" lang="scss" scoped></style>

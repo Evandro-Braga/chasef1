@@ -71,12 +71,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.scheduleList h3 {
-    margin-top: 30px;
-}
-
-.scheduleList p {
-    margin: 20px;
-}
-</style>
+<style src="./Style.scss" lang="scss" scoped></style>

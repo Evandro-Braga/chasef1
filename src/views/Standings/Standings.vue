@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import HeaderComponent from '@/components/HeaderComponent.vue'
+import HeaderComponent from '@/components/Header/Header.vue';
 import api from '@/services/api'
-import StandingsListComponent from '@/components/StandingsListComponent.vue'
-import ConstructorsListComponent from '@/components/ConstructorsListComponent.vue'
+import StandingsListComponent from '@/components/StandingsList/StandingsList.vue'
+import ConstructorsListComponent from '@/components/ConstructorsList/ConstructorsList.vue'
 
 export default {
     name: "StandingsView",

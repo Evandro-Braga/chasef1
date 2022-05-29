@@ -6,9 +6,3 @@
 .schedule h2 {
     margin: 30px 0 30px 0;
 }
-
-@media (max-width: 700px) {
-    .schedule {
-        margin-left: 0;
-    }
-}

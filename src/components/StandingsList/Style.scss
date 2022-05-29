@@ -1,0 +1,11 @@
+@import '@/assets/scss/colors';
+
+.standings {
+    width: 100%;
+}
+
+.standings table {
+    width: 80%;
+    color: $textColor;
+    text-align: left;
+}

@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import HeaderComponent from '@/components/HeaderComponent.vue';
+import HeaderComponent from '@/components/Header/Header.vue';
 import api from '@/services/api.js';
-import DriversListComponent from '@/components/DriversListComponent.vue';
+import DriversListComponent from '@/components/DriversList/DriversList.vue';
 
 export default {
   name: "DriversView",

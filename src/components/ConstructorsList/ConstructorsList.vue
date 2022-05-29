@@ -30,7 +30,7 @@
 <script>
 
 export default {
-    name: 'ConstructorsListComponent',
+    name: 'ConstructorsList',
 
     props: {
         constructors: Object
@@ -38,16 +38,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '@/assets/scss/colors';
-
-.constructorsList{
-    width: 100%;
-}
-
-.constructorsList table{
-    color: $textColor;
-    width: 80%;
-    text-align: left;
-}
-</style>
+<style src="./Style.scss" lang="scss" scoped></style>
