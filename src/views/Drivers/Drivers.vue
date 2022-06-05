@@ -2,7 +2,7 @@
   <HeaderComponent></HeaderComponent>
   <div class="drivers">
     <h2>
-      PILOTOS
+      Pilotos
     </h2>
     <DriversListComponent :drivers="drivers"></DriversListComponent>
   </div>

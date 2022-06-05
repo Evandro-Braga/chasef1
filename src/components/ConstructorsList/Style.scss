@@ -1,11 +1,5 @@
-@import '@/assets/scss/colors';
-
-.constructorsList {
-    width: 100%;
-}
+@import '@/assets/scss/mixins';
 
 .constructorsList table {
-    color: $textColor;
-    width: 80%;
-    text-align: left;
+    @include table
 }

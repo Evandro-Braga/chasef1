@@ -3,7 +3,7 @@
   <div class="home">
     <div class="homeTitle">
       <h2>
-        FORMULA 1 - 2022
+        Formula 1 - 2022
       </h2>
     </div>
     <div class="homeImage">

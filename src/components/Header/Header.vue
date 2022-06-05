@@ -2,7 +2,7 @@
     <div class="header">
         <h1>
             <router-link to="/">
-                Chase F1
+                CHASE F1
             </router-link>
         </h1>
         <router-link to="#" class="toogle" @click="active">
@@ -13,17 +13,17 @@
         <ul id="myLinks" class="links">
             <li>
                 <router-link to="/schedule">
-                    CALENDARIO
+                    Calendario
                 </router-link>
             </li>
             <li>
                 <router-link to="/standings">
-                    CLASSIFICAÇÃO
+                    Classificação
                 </router-link>
             </li>
             <li>
                 <router-link to="/drivers">
-                    PILOTOS
+                    Pilotos
                 </router-link>
             </li>
         </ul>

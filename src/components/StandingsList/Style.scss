@@ -1,11 +1,5 @@
-@import '@/assets/scss/colors';
+@import '@/assets/scss/mixins';
 
-.standings {
-    width: 100%;
-}
-
-.standings table {
-    width: 80%;
-    color: $textColor;
-    text-align: left;
+.standingsList table{
+    @include table
 }

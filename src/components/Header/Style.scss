@@ -1,13 +1,13 @@
 .header {
     display: flex;
     justify-content: space-around;
-    background-color: #101010;
+    background-color:#101010;
 }
 
 .header h1 {
-    font-weight: 500;
-    margin: 8px;
-    letter-spacing: 3px;
+    margin: 12px;
+    font-size: 24px;
+    font-style: oblique;
 }
 
 .header h1 a {
@@ -54,7 +54,7 @@
     }
 
     .header h1 {
-        margin: 8px;
+        margin: 12px;
         text-align: left;
     }
 
@@ -66,9 +66,10 @@
         display: block;
         max-width: 100%;
         text-align: center;
+        font-size: 24px;
     }
 
     .header .links li {
-        margin: 20px 0 20px 0;
+        margin: 30px 0 30px 0;
     }
 }

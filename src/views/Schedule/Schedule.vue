@@ -2,7 +2,7 @@
 <HeaderComponent></HeaderComponent>
 <div class="schedule">
     <h2>
-        CALENDARIO - {{ scheduleYear }}
+        Calendario - {{ scheduleYear }}
     </h2>
 
     <ScheduleList :schedule="schedule"></ScheduleList>

@@ -2,7 +2,7 @@
     <HeaderComponent></HeaderComponent>
     <div class="standings">
         <h2>
-            CLASSIFICAÇÃO
+            Classificação
         </h2>
         <h3>
             Pilotos

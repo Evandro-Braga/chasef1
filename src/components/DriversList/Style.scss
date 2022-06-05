@@ -1,15 +1,9 @@
-@import '@/assets/scss/colors';
+@import '@/assets/scss/mixins';
 
-.list {
-    width: 100%;
+.list table{
+    @include table
 }
 
-table {
-    width: 100%;
-    color: $textColor;
-    text-align: left;
-}
-
-table a {
+.list table a{
     color: skyblue;
 }
