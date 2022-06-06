@@ -1,29 +1,39 @@
 <template>
     <div class="scheduleList">
-        <div v-for="sche of schedule" :key="sche.round">
-            <h3>
-                {{ sche.round }}) {{ sche.raceName }} - {{ sche.Circuit.Location.locality }},
-                {{ sche.Circuit.Location.country }}
+
+        <div v-for="s of schedule" :key="s.round">
+            <h4>
+                {{ s.raceName }} --- {{ s.date }} ---
+                <a :href="'#'+s.round">
+                    Ver Horarios
+                </a>
+            </h4>
+        </div>
+
+        <div v-for="a of schedule" :key="a.round">
+            <h3 :id="a.round">
+                {{ a.round }}) {{ a.raceName }} - {{ a.Circuit.Location.locality }},
+                {{ a.Circuit.Location.country }}
             </h3>
 
             <p>
-                Treino Livre 1 - {{ convertDate(sche.FirstPractice.date, sche.FirstPractice.time) }}
+                Treino Livre 1 - {{ convertDate(a.FirstPractice.date, a.FirstPractice.time) }}
             </p>
 
             <p>
-                Treino Livre 2 - {{ convertDate(sche.SecondPractice.date, sche.SecondPractice.time) }}
+                Treino Livre 2 - {{ convertDate(a.SecondPractice.date, a.SecondPractice.time) }}
             </p>
 
             <p>
-                Treino Livre 3 / Sprint - {{ sprint(sche) }}
+                Treino Livre 3 / Sprint - {{ sprint(a) }}
             </p>
 
             <p>
-                Qualificação - {{ convertDate(sche.Qualifying.date, sche.Qualifying.time) }}
+                Qualificação - {{ convertDate(a.Qualifying.date, a.Qualifying.time) }}
             </p>
 
             <p>
-                CORRIDA - {{ convertDate(sche.date, sche.time) }}
+                CORRIDA - {{ convertDate(a.date, a.time) }}
             </p>
         </div>
     </div>

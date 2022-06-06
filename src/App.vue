@@ -18,7 +18,7 @@ export default {
   font-family: 'Montserrat', sans-serif;
 }
 
-p, a, h1, h2, h3{
+p, a, h1, h2, h3, h4{
   color: $textColor
 }
 

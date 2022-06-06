@@ -28,6 +28,7 @@ export default {
     mounted(){
         api.get('current.json').then(response => {
             this.schedule = response.data.MRData.RaceTable.Races
+            console.log(response.data.MRData.RaceTable.Races);
             this.scheduleYear = response.data.MRData.RaceTable.Races[0].season
         })
     },
