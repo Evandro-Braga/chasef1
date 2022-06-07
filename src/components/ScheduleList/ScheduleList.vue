@@ -3,7 +3,7 @@
 
         <div v-for="s of schedule" :key="s.round">
             <h4>
-                {{ s.raceName }} --- {{ s.date }} ---
+                {{ s.date }} - {{ s.raceName }} -
                 <a :href="'#'+s.round">
                     Ver Horarios
                 </a>

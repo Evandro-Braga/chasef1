@@ -9,3 +9,14 @@
         width: 100%;
     }
 }
+
+@mixin bodyPage {
+    min-height: 100vh;
+    max-width: 80%;
+    padding: 1%;
+    margin: auto;
+
+    @media (max-width: 700px) {
+        max-width: 100%;
+    }
+}
