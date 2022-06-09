@@ -2,7 +2,7 @@
     <div class="header">
         <h1>
             <router-link to="/">
-                CHASE F1
+                Chase F1
             </router-link>
         </h1>
         <router-link to="#" class="toogle" @click="active">

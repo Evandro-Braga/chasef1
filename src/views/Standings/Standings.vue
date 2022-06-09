@@ -8,10 +8,12 @@
             Pilotos
         </h3>
         <StandingsListComponent :standings="standings"></StandingsListComponent>
-        <h3>
-            Construtores
-        </h3>
-        <ConstructorsListComponent :constructors="constructorStandings"> </ConstructorsListComponent>
+        <div class="constructors">
+            <h3>
+                Construtores
+            </h3>
+            <ConstructorsListComponent :constructors="constructorStandings"> </ConstructorsListComponent>
+        </div>
     </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
     <div class="scheduleList">
 
-        <div v-for="s of schedule" :key="s.round">
+        <div class="topics" v-for="s of schedule" :key="s.round">
             <h4>
                 {{ s.date }} - {{ s.raceName }} -
                 <a :href="'#'+s.round">
@@ -10,7 +10,7 @@
             </h4>
         </div>
 
-        <div v-for="a of schedule" :key="a.round">
+        <div class="schedule" v-for="a of schedule" :key="a.round">
             <h3 :id="a.round">
                 {{ a.round }}) {{ a.raceName }} - {{ a.Circuit.Location.locality }},
                 {{ a.Circuit.Location.country }}

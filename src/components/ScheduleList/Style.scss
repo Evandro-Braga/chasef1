@@ -1,7 +1,3 @@
-.scheduleList h3 {
-    margin-top: 100px;
-}
-
 .scheduleList p {
     margin: 10px;
     font-size: 18px;
@@ -9,9 +5,19 @@
 
 .scheduleList a {
     font-size: 18px;
-    color: lightseagreen;
+    color: green;
 }
 
 .scheduleList h4 {
     margin-top: 10px;
+}
+
+.schedule {
+    max-width: 100%;
+    border-top: 1px solid #00008B;
+    padding: 50px 0 50px 0;
+}
+
+.topics {
+    margin: 0 0 20px 0;
 }
