@@ -3,21 +3,21 @@
     font-size: 18px;
 }
 
-.scheduleList a {
-    font-size: 18px;
-    color: green;
-}
-
 .scheduleList h4 {
     margin-top: 10px;
 }
 
 .schedule {
     max-width: 100%;
-    border-top: 1px solid #00008B;
+    border-top: 1px solid #101010;
     padding: 50px 0 50px 0;
 }
 
 .topics {
     margin: 0 0 20px 0;
+}
+
+a {
+    color: #006cdd;
+    font-style: italic;
 }

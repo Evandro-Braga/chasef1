@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-around;
-    background-color:#F5F5F5;
+    background-color: #101010;;
 }
 
 .header h1 {
@@ -11,7 +11,7 @@
 }
 
 .header h1 a {
-    color: red;
+    color: #e60000;
 }
 
 .header .links {
@@ -44,7 +44,7 @@
     .toogle .bar {
         height: 3px;
         width: 100%;
-        background-color: #101010;
+        background-color: white;
         border-radius: 10px;
     }
 

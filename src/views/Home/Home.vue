@@ -1,15 +1,7 @@
 <template>
+<div class="Home">
   <HeaderComponent></HeaderComponent>
-  <div class="home">
-    <div class="homeTitle">
-      <h2>
-        Formula 1 - 2022
-      </h2>
-    </div>
-    <div class="homeImage">
-
-    </div>
-  </div>
+</div>
 </template>
 
 <script>

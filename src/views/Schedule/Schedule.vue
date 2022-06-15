@@ -1,11 +1,12 @@
 <template>
 <HeaderComponent></HeaderComponent>
-<div class="schedule">
+<div class="Schedule">
     <h2>
         Calendario - {{ scheduleYear }}
     </h2>
-
-    <ScheduleList :schedule="schedule"></ScheduleList>
+    <div class="ScheduleList">
+        <ScheduleList :schedule="schedule"></ScheduleList>
+    </div>
 </div>
 </template>
 

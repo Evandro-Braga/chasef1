@@ -19,10 +19,10 @@ export default {
 }
 
 p, a, h1, h2, h3, h4 {
-  color: $textColor
+  color: $TextColor
 }
 
 #app {
-background-color: white;
+background-color: #080808;
 }
 </style>

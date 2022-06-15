@@ -1,18 +1,8 @@
 @import '@/assets/scss/mixins';
 
-.home {
-    @include bodyPage
-}
-
-.home h2 {
-    margin: 10px 0 50px 0;
-}
-
-.homeImage {
-    background-image: url('@/images/Formula-1.jpg');
+.Home {
+    background-image: url("@/images/FORMULA-1-LOGO.jpg");
     background-size: cover;
     background-position: center;
-    min-width: 100%;
-    height: 650px;
-    margin: auto;
+    min-height: 110vh;
 }

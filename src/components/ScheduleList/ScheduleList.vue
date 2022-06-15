@@ -2,7 +2,7 @@
     <div class="scheduleList">
 
         <div class="topics" v-for="s of schedule" :key="s.round">
-            <h4>
+            <h4 id="topics">
                 {{ s.date }} - {{ s.raceName }} -
                 <a :href="'#'+s.round">
                     Ver Horarios
@@ -17,24 +17,26 @@
             </h3>
 
             <p>
-                Treino Livre 1 - {{ convertDate(a.FirstPractice.date, a.FirstPractice.time) }}
+                {{ convertDate(a.FirstPractice.date, a.FirstPractice.time) }} - TL1 (Treino livre 1)
             </p>
 
             <p>
-                Treino Livre 2 - {{ convertDate(a.SecondPractice.date, a.SecondPractice.time) }}
+                {{ convertDate(a.SecondPractice.date, a.SecondPractice.time) }} - TL2 (Treino livre 2)
             </p>
 
             <p>
-                Treino Livre 3 / Sprint - {{ sprint(a) }}
+                {{ sprint(a) }} - TL3 (Treino livre 3) / Sprint Race
             </p>
 
             <p>
-                Qualificação - {{ convertDate(a.Qualifying.date, a.Qualifying.time) }}
+                {{ convertDate(a.Qualifying.date, a.Qualifying.time) }} - Qualificação
             </p>
 
             <p>
-                CORRIDA - {{ convertDate(a.date, a.time) }}
+                {{ convertDate(a.date, a.time) }} - CORRIDA
             </p>
+
+            <a href="#topics"> >> Voltar ao topo </a>
         </div>
     </div>
 </template>
@@ -61,7 +63,8 @@ export default {
         convertDate: function (date, time) {
             var fullDate = date + 'T' + time
             var newDate = new Date(fullDate)
-            return `${this.day[newDate.getDay()]} - ${newDate.getDate()} de ${this.mounths[newDate.getMonth()]}, ás ${newDate.getHours()}h`;
+            
+            return `${newDate.getDate()} de ${this.mounths[newDate.getMonth()]} - ${this.day[newDate.getDay()]}, ás ${newDate.getHours()}h`;
         },
 
         sprint: function (sprint) {
@@ -69,12 +72,12 @@ export default {
                 var sprintFullDate = sprint.Sprint.date + 'T' + sprint.Sprint.time
                 var sprintNewDate = new Date(sprintFullDate)
 
-                return `${this.day[sprintNewDate.getDay()]} - ${sprintNewDate.getDate()} de ${this.mounths[sprintNewDate.getMonth()]}, ás ${sprintNewDate.getHours()}h`;
+                return `${sprintNewDate.getDate()} de ${this.mounths[sprintNewDate.getMonth()]} - ${this.day[sprintNewDate.getDay()]}, ás ${sprintNewDate.getHours()}h`;
             } else {
                 var fullDate = sprint.ThirdPractice.date + 'T' + sprint.ThirdPractice.time
                 var newDate = new Date(fullDate)
 
-                return `${this.day[newDate.getDay()]} - ${newDate.getDate()} de ${this.mounths[newDate.getMonth()]}, ás ${newDate.getHours()}h`;
+                return `${newDate.getDate()} de ${this.mounths[newDate.getMonth()]} - ${this.day[newDate.getDay()]}, ás ${newDate.getHours()}h`;
             }
         }
     }
