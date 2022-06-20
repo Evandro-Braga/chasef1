@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import HeaderComponent from '@/components/Header/Header.vue';
+import HeaderComponent from '@/components/Header.vue';
 import api from '@/services/api'
-import StandingsListComponent from '@/components/StandingsList/StandingsList.vue'
-import ConstructorsListComponent from '@/components/ConstructorsList/ConstructorsList.vue'
+import StandingsListComponent from '@/components/StandingsList.vue'
+import ConstructorsListComponent from '@/components/ConstructorsList.vue'
 
 export default {
     name: "StandingsView",
@@ -41,10 +41,35 @@ export default {
 
         api.get('current/constructorStandings.json').then(response => {
             this.constructorStandings = response.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings
-            console.log(this.constructorStandings)
+            //console.log(this.constructorStandings)
         })
     }
 }
 </script>
 
-<style src="./Style.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "@/assets/scss/mixins";
+
+.standings {
+    @include bodyPage;
+}
+
+h2 {
+    margin: 10px 0 0 0;
+}
+
+.standings h3 {
+    margin: 50px 0 0 0;
+}
+
+.constructors {
+    max-width: 100%;
+    border-top: 1px solid #101010;
+    margin: 20px 0 0 0;
+    padding: 20px 0 20px 0;
+}
+
+.constructors h3 {
+    margin: 0;
+}
+</style>

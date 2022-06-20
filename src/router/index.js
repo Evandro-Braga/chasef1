@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/Home/Home'
-import DriversView from '@/views/Drivers/Drivers'
-import StandingsView from '@/views/Standings/Standings'
-import ScheduleView from '@/views/Schedule/Schedule'
+import HomeView from '@/views/Home'
+import DriversView from '@/views/Drivers'
+import StandingsView from '@/views/Standings'
+import ScheduleView from '@/views/Schedule'
 
 const routes = [
   {

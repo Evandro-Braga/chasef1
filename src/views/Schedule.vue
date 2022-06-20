@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import HeaderComponent from '@/components/Header/Header.vue';
-import ScheduleList from '@/components/ScheduleList/ScheduleList.vue'
+import HeaderComponent from '@/components/Header.vue';
+import ScheduleList from '@/components/ScheduleList.vue'
 import api from '@/services/api'
 
 export default {
@@ -29,11 +29,21 @@ export default {
     mounted(){
         api.get('current.json').then(response => {
             this.schedule = response.data.MRData.RaceTable.Races
-            console.log(response.data.MRData.RaceTable.Races);
+            //console.log(response.data.MRData.RaceTable.Races);
             this.scheduleYear = response.data.MRData.RaceTable.Races[0].season
         })
     },
 }
 </script>
 
-<style src="./Style.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/assets/scss/mixins';
+
+.Schedule {
+    @include bodyPage
+}
+
+h2 {
+    margin: 10px 0 50px 0;
+}
+</style>

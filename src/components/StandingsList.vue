@@ -1,26 +1,26 @@
 <template>
-    <div class="constructorsList">
+    <div class="standingsList">
         <table>
             <tr>
                 <th>
                     Posição
                 </th>
                 <th>
-                    Construtor
+                    Piloto
                 </th>
                 <th>
                     Pontos
                 </th>
             </tr>
-            <tr v-for="cons of constructors" :key="cons.position">
+            <tr v-for="pos of standings" :key="pos.position">
                 <td>
-                    {{ cons.positionText }}º
+                    {{ pos.positionText }}º
                 </td>
                 <td>
-                    {{ cons.Constructor.name }}
+                    {{ pos.Driver.givenName}}  {{ pos.Driver.familyName}}
                 </td>
                 <td>
-                    {{ cons.points }}
+                    {{ pos.points }}
                 </td>
             </tr>
         </table>
@@ -30,12 +30,18 @@
 <script>
 
 export default {
-    name: 'ConstructorsList',
+    name: 'StandingsList',
 
     props: {
-        constructors: Object
+        standings: Object
     }
 }
 </script>
 
-<style src="./Style.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/assets/scss/mixins';
+
+.standingsList table{
+    @include table
+}
+</style>

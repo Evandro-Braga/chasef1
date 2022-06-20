@@ -37,4 +37,14 @@ export default {
 }
 </script>
 
-<style src="./Style.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/assets/scss/mixins';
+
+.list table{
+    @include table
+}
+
+.list table a{
+    color:#6CA6CD;
+}
+</style>

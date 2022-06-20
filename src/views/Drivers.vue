@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import HeaderComponent from '@/components/Header/Header.vue';
+import HeaderComponent from '@/components/Header.vue';
 import api from '@/services/api.js';
-import DriversListComponent from '@/components/DriversList/DriversList.vue';
+import DriversListComponent from '@/components/DriversList.vue';
 
 export default {
   name: "DriversView",
@@ -32,4 +32,13 @@ export default {
 }
 </script>
 
-<style src="./Style.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/assets/scss/mixins';
+.drivers {
+    @include bodyPage
+}
+
+h2 {
+    margin: 10px 0 50px 0;
+}
+</style>
