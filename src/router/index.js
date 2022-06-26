@@ -3,6 +3,7 @@ import HomeView from '@/views/Home'
 import DriversView from '@/views/Drivers'
 import StandingsView from '@/views/Standings'
 import ScheduleView from '@/views/Schedule'
+import ResultsView from '@/views/Results'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/schedule',
     name: 'schedule',
     component: ScheduleView
+  },
+  {
+    path: '/results/:id',
+    name: 'results',
+    component: ResultsView
   }
 ]
 

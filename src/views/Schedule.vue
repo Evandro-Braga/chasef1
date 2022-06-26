@@ -1,13 +1,15 @@
 <template>
-<HeaderComponent></HeaderComponent>
-<div class="Schedule">
-    <h2>
-        Calendario - {{ scheduleYear }}
-    </h2>
-    <div class="ScheduleList">
-        <ScheduleList :schedule="schedule"></ScheduleList>
+    <div class="min-h-screen">
+        <HeaderComponent></HeaderComponent>
+        <div class="text-white w-full p-4 sm:w-3/4 sm:m-auto">
+            <h2 class="my-8 text-xl font-bold">
+                Calendario {{ scheduleYear }}
+            </h2>
+            <div>
+                <ScheduleList :schedule="schedule"></ScheduleList>
+            </div>
+        </div>
     </div>
-</div>
 </template>
 
 <script>
@@ -35,15 +37,3 @@ export default {
     },
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/assets/scss/mixins';
-
-.Schedule {
-    @include bodyPage
-}
-
-h2 {
-    margin: 10px 0 50px 0;
-}
-</style>

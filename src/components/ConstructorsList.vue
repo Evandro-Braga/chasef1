@@ -1,6 +1,6 @@
 <template>
-    <div class="constructorsList">
-        <table>
+    <div>
+        <table class="text-white text-left w-full sm:max-w-xl">
             <tr>
                 <th>
                     Posição
@@ -37,11 +37,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/assets/scss/mixins';
-
-.constructorsList table {
-    @include table
-}
-</style>

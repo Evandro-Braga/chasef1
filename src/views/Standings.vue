@@ -1,18 +1,20 @@
 <template>
-    <HeaderComponent></HeaderComponent>
-    <div class="standings">
-        <h2>
-            Classificação
-        </h2>
-        <h3>
-            Pilotos
-        </h3>
-        <StandingsListComponent :standings="standings"></StandingsListComponent>
-        <div class="constructors">
-            <h3>
-                Construtores
+    <div class="text-white min-h-screen">
+        <HeaderComponent></HeaderComponent>
+        <div class="p-4 sm:w-3/4 sm:m-auto">
+            <h2 class="text-xl my-8 font-bold">
+                Classificação
+            </h2>
+            <h3 class="text-lg">
+                Pilotos
             </h3>
-            <ConstructorsListComponent :constructors="constructorStandings"> </ConstructorsListComponent>
+            <StandingsListComponent :standings="standings"></StandingsListComponent>
+            <div class="mt-16">
+                <h3>
+                    Construtores
+                </h3>
+                <ConstructorsListComponent :constructors="constructorStandings"> </ConstructorsListComponent>
+            </div>
         </div>
     </div>
 </template>
@@ -35,7 +37,7 @@ export default {
     },
 
     mounted() {
-        api.get('2022/driverStandings.json').then(response => {
+        api.get('current/driverStandings.json').then(response => {
             this.standings = response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings
         })
 
@@ -46,30 +48,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
-@import "@/assets/scss/mixins";
-
-.standings {
-    @include bodyPage;
-}
-
-h2 {
-    margin: 10px 0 0 0;
-}
-
-.standings h3 {
-    margin: 50px 0 0 0;
-}
-
-.constructors {
-    max-width: 100%;
-    border-top: 1px solid #101010;
-    margin: 20px 0 0 0;
-    padding: 20px 0 20px 0;
-}
-
-.constructors h3 {
-    margin: 0;
-}
-</style>

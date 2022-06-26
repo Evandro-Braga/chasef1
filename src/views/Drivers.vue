@@ -1,10 +1,12 @@
 <template>
-  <HeaderComponent></HeaderComponent>
-  <div class="drivers">
-    <h2>
-      Pilotos
-    </h2>
-    <DriversListComponent :drivers="drivers"></DriversListComponent>
+  <div class="min-h-screen text-white">
+    <HeaderComponent></HeaderComponent>
+    <div class="p-4 sm:w-3/4 sm:mx-auto">
+      <h2 class="my-8 text-xl font-bold">
+        Pilotos
+      </h2>
+      <DriversListComponent :drivers="drivers"></DriversListComponent>
+    </div>
   </div>
 </template>
 
@@ -25,20 +27,9 @@ export default {
   },
 
   mounted() {
-    api.get('2022/drivers.json').then(response => {
+    api.get('current/drivers.json').then(response => {
       this.drivers = response.data.MRData.DriverTable.Drivers
     })
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/assets/scss/mixins';
-.drivers {
-    @include bodyPage
-}
-
-h2 {
-    margin: 10px 0 50px 0;
-}
-</style>

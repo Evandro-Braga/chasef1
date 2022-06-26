@@ -1,6 +1,6 @@
 <template>
-    <div class="list">
-        <table>
+    <div>
+        <table class="text-white text-left w-full sm:max-w-xl">
             <tr>
                 <th>
                     Numero
@@ -16,7 +16,7 @@
                 <td>
                     {{ driver.permanentNumber }}
                 </td>
-                <td>
+                <td class="text-blue-300">
                     <a :href="driver.url" target="_blank"> {{ driver.givenName }} {{ driver.familyName }} </a>
                 </td>
                 <td>
@@ -36,15 +36,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
-@import '@/assets/scss/mixins';
-
-.list table{
-    @include table
-}
-
-.list table a{
-    color:#6CA6CD;
-}
-</style>

@@ -1,30 +1,19 @@
 <template>
-    <div class="header">
-        <h1>
-            <router-link to="/">
-                Chase F1
-            </router-link>
+    <div class="bg-neutral-900 text-neutral-100 py-3.5 px-6 shadow md:flex justify-around">
+        <h1 class="text-red-600 text-2xl cursor-pointer italic font-bold">
+            <router-link to="/"> Chase F1 </router-link>
         </h1>
-        <router-link to="#" class="toggle" @click="active">
-            <span class="bar"> </span>
-            <span class="bar"> </span>
-            <span class="bar"> </span>
-        </router-link>
-        <ul id="myLinks" class="links">
-            <li>
-                <router-link to="/schedule">
-                    Calendario
-                </router-link>
-            </li>
-            <li>
-                <router-link to="/standings">
-                    Classificação
-                </router-link>
-            </li>
-            <li>
-                <router-link to="/drivers">
-                    Pilotos
-                </router-link>
+
+        <span class="absolute md:hidden right-6 top-1.5 cursor-pointer text-white text-4xl" @click="menuOpen()">
+            <i :class="open ? 'bi bi-x' : 'bi bi-filter-left'"></i>
+        </span>
+
+        <ul class="md:flex md:items-center md:cursor-pointer md:space-x-4 md:static absolute md:w-auto w-full
+        top-14 duration-300 ease-in bg-neutral-900 p-8 md:p-0"
+        :class="open ? 'left-0' : 'left-[-100%]'">
+            <li class="border-t border-inherit md:border-none py-4 md:py-0 pl-8
+             text-xl md:text-lg md:my-0" v-for="link in links" :key="link.name">
+                <router-link :to="'/'+link.link"> {{ link.name }} </router-link>
             </li>
         </ul>
     </div>
@@ -34,93 +23,22 @@
 export default {
     name: 'HeaderComponent',
 
+    data() {
+        return {
+            links: [
+                {name: "Calendario", link: "schedule"},
+                {name: "Classificação", link: "standings"},
+                {name: "Pilotos", link: "drivers"}
+                ],
+
+            open: false
+        }
+    },
+
     methods: {
-        active: function () {
-            var x = document.getElementById("myLinks");
-            if (x.className === "links") {
-                x.className += " responsive";
-            } else {
-                x.className = "links";
-            }
+        menuOpen: function() {
+            this.open = !this.open
         }
     }
 }
 </script>
-
-<style lang="scss" scoped>
-.header {
-    display: flex;
-    justify-content: space-around;
-    background-color: #101010;;
-}
-
-.header h1 {
-    margin: 12px;
-    font-size: 24px;
-    font-style: oblique;
-}
-
-.header h1 a {
-    color: #e60000;
-}
-
-.header .links {
-    display: flex;
-    width: 400px;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.header .links li {
-    list-style: none;
-}
-
-.header .links li a {
-    font-weight: bold;
-}
-
-@media (max-width: 700px) {
-    .toggle {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-    }
-
-    .toggle .bar {
-        height: 3px;
-        width: 100%;
-        background-color: white;
-        border-radius: 10px;
-    }
-
-    .header {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .header h1 {
-        margin: 12px;
-        text-align: left;
-    }
-
-    .header .links {
-        display: none;
-    }
-
-    .header .links.responsive {
-        display: block;
-        max-width: 100%;
-        text-align: center;
-        font-size: 24px;
-    }
-
-    .header .links li {
-        margin: 30px 0 30px 0;
-    }
-}
-</style>
