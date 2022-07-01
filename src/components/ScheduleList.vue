@@ -2,14 +2,14 @@
     <div>
         <div class="space-y-2">
             <h4 id="topics" v-for="s of schedule" :key="s.round">
-                {{ getFullDate(s.date) }} - {{ s.raceName }} - <a class="text-blue-300" :href="'#' + s.round"> Ver Horarios </a>
-                - <a class="text-blue-300" :href="'results/' + s.round"> Resultado </a>
+                {{ getFullDate(s.date) }} - {{ s.raceName }} 
+                - <a class="text-blue-300" :href="'#' + s.round"> Ver Horarios </a>
             </h4>
         </div>
 
         <div v-for="a of schedule" :key="a.round">
-            <h3 class="mt-32 text-xl font-bold" :id="a.round">
-                {{ a.raceName }} - {{ a.Circuit.Location.locality }}, {{ a.Circuit.Location.country }}
+            <h3 class="mt-32 text-xl font-bold italic" :id="a.round">
+                {{ a.raceName }}
             </h3>
 
             <!--FP1 DATE-->
@@ -113,7 +113,7 @@ export default {
 
         getFullDate: function (date) {
             let newDate = new Date(date)
-            let dia = newDate.getDate()
+            let dia = newDate.getUTCDate()
             let mes = newDate.getMonth()+1
             let ano = newDate.getFullYear()
             return dia +' / '+ mes +' / '+ ano

@@ -1,18 +1,24 @@
 <template>
     <div class="text-white min-h-screen">
         <HeaderComponent></HeaderComponent>
-        <div class="p-4 sm:w-3/4 sm:m-auto">
-            <h2 class="text-xl my-8 font-bold">
-                Classificação
-            </h2>
-            <h3 class="text-lg">
-                Pilotos
-            </h3>
-            <StandingsListComponent :standings="standings"></StandingsListComponent>
-            <div class="mt-16">
-                <h3>
-                    Construtores
-                </h3>
+        <div class="p-4 space-y-16 sm:w-4/5 sm:m-auto">
+            <div class="space-y-8">
+                <div class="flex space-x-4">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/motorbike-helmet.png" />
+                    <h2 class="text-xl italic font-bold">
+                        Pilotos
+                    </h2>
+                </div>
+                <StandingsListComponent :standings="standings"></StandingsListComponent>
+            </div>
+
+            <div class="space-y-8">
+                <div class="flex space-x-4">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/maintenance.png" />
+                    <h2 class="text-xl italic font-bold">
+                        Construtores
+                    </h2>
+                </div>
                 <ConstructorsListComponent :constructors="constructorStandings"> </ConstructorsListComponent>
             </div>
         </div>
@@ -43,7 +49,6 @@ export default {
 
         api.get('current/constructorStandings.json').then(response => {
             this.constructorStandings = response.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings
-            //console.log(this.constructorStandings)
         })
     }
 }

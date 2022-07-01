@@ -1,6 +1,6 @@
 <template>
     <div>
-        <table class="text-white text-left w-full sm:max-w-xl">
+        <table class="text-white text-left w-full sm:max-w-lg">
             <tr>
                 <th>
                     Posição

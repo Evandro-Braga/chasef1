@@ -1,5 +1,5 @@
 <template>
-  <router-view/>
+  <router-view class="bg-neutral-900"/>
 </template>
 
 <script>
@@ -14,9 +14,5 @@ export default {
   padding: 0;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
-}
-
-#app {
-background-color: #080808;
 }
 </style>

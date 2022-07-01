@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/Home'
-import DriversView from '@/views/Drivers'
+import ResultsView from '@/views/Results'
 import StandingsView from '@/views/Standings'
 import ScheduleView from '@/views/Schedule'
-import ResultsView from '@/views/Results'
+import RaceResultView from '@/views/RaceResult'
 
 const routes = [
   {
@@ -12,9 +12,9 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/drivers',
-    name: 'drivers',
-    component: DriversView
+    path: '/results',
+    name: 'results',
+    component: ResultsView
   },
   {
     path: '/standings',
@@ -27,9 +27,9 @@ const routes = [
     component: ScheduleView
   },
   {
-    path: '/results/:id',
-    name: 'results',
-    component: ResultsView
+    path: '/result/:id',
+    name: 'result',
+    component: RaceResultView
   }
 ]
 

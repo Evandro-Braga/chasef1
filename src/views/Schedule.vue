@@ -1,13 +1,14 @@
 <template>
     <div class="min-h-screen">
         <HeaderComponent></HeaderComponent>
-        <div class="text-white w-full p-4 sm:w-3/4 sm:m-auto">
-            <h2 class="my-8 text-xl font-bold">
-                Calendario {{ scheduleYear }}
-            </h2>
-            <div>
-                <ScheduleList :schedule="schedule"></ScheduleList>
+        <div class="text-white w-full space-y-8 p-4 sm:w-4/5 sm:m-auto">
+            <div class="flex space-x-4">
+                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/calendar.png" />
+                <h2 class="text-xl italic font-bold">
+                    Calendario 2022
+                </h2>
             </div>
+            <ScheduleList :schedule="schedule"></ScheduleList>
         </div>
     </div>
 </template>
@@ -24,15 +25,12 @@ export default {
     data(){
         return{
             schedule: [],
-            scheduleYear: ''
         }
     },
 
     mounted(){
         api.get('current.json').then(response => {
             this.schedule = response.data.MRData.RaceTable.Races
-            //console.log(response.data.MRData.RaceTable.Races);
-            this.scheduleYear = response.data.MRData.RaceTable.Races[0].season
         })
     },
 }
