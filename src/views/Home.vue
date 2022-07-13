@@ -1,7 +1,10 @@
 <template>
-<div class="Home">
-  <HeaderComponent></HeaderComponent>
-</div>
+  <div>
+    <HeaderComponent></HeaderComponent>
+    <div class="min-h-screen bg-gradient-to-t from-gray-900 to-neutral-900">
+      <img class="m-auto" src="@/images/F1-LOGO-removebg-preview.png" alt="">
+    </div>
+  </div>
 </template>
 
 <script>
@@ -14,11 +17,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.Home {
-    background-image: url("@/images/F1-LOGO.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 110vh;
-}
-</style>
+<style lang="scss" scoped></style>

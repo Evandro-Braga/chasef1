@@ -1,14 +1,23 @@
 <template>
     <div>
-        <div class="space-y-2">
-            <h4 id="topics" v-for="s of schedule" :key="s.round">
-                {{ getFullDate(s.date) }} - {{ s.raceName }} 
-                - <a class="text-blue-300" :href="'#' + s.round"> Ver Horarios </a>
-            </h4>
+        <div class="space-y-8 bg-neutral-800 rounded-md p-4 max-w-lg shadow">
+            <div class="flex space-x-4">
+                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/calendar.png" />
+                <h2 class="text-xl italic font-bold">
+                    Calendario 2022
+                </h2>
+            </div>
+
+            <div class="space-y-2">
+                <h4 id="topics" v-for="s of schedule" :key="s.round">
+                    {{ getFullDate(s.date) }} - {{ s.raceName }}
+                    - <a class="text-blue-300" :href="'#' + s.round"> Ver Horarios </a>
+                </h4>
+            </div>
         </div>
 
-        <div v-for="a of schedule" :key="a.round">
-            <h3 class="mt-32 text-xl font-bold italic" :id="a.round">
+        <div class="bg-neutral-800 max-w-md rounded-md p-4 shadow mt-32" v-for="a of schedule" :key="a.round">
+            <h3 class="text-xl font-bold italic" :id="a.round">
                 {{ a.raceName }}
             </h3>
 
@@ -26,7 +35,7 @@
                 {{ getHours(a.SecondPractice.date, a.SecondPractice.time) }}H
             </p>
             <p v-else class="ml-8">
-                Qualificação - {{ getDay(a.Qualifying.date) }}, ás 
+                Qualificação - {{ getDay(a.Qualifying.date) }}, ás
                 {{ getHours(a.Qualifying.date, a.Qualifying.time) }}H
             </p>
 
@@ -48,11 +57,11 @@
             </p>
 
             <p v-if="!a.Sprint" class="ml-8">
-                Qualificação - {{ getDay(a.Qualifying.date) }}, ás 
+                Qualificação - {{ getDay(a.Qualifying.date) }}, ás
                 {{ getHours(a.Qualifying.date, a.Qualifying.time) }}H
             </p>
             <p v-else class="ml-8">
-                Sprint Race - {{ getDay(a.Sprint.date) }}, ás 
+                Sprint Race - {{ getDay(a.Sprint.date) }}, ás
                 {{ getHours(a.Sprint.date, a.Sprint.time) }}
             </p>
 
@@ -62,7 +71,8 @@
             </h4>
 
             <p class="ml-8">
-                <span class="text-red-600"> CORRIDA </span> - {{ getDay(a.date) }}, ás {{ getHours(a.date, a.time) }}H
+                <span class="text-red-600"> CORRIDA </span> - {{ getDay(a.date) }}, ás {{ getHours(a.date, a.time)
+                }}H
             </p>
 
             <p class="back"><a class="text-blue-300" href="#topics"> > Voltar ao topo </a></p>

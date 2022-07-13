@@ -1,24 +1,12 @@
 <template>
-    <div class="text-white min-h-screen">
+    <div class="min-h-screen">
         <HeaderComponent></HeaderComponent>
-        <div class="p-4 space-y-16 sm:w-4/5 sm:m-auto">
-            <div class="space-y-8">
-                <div class="flex space-x-4">
-                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/motorbike-helmet.png" />
-                    <h2 class="text-xl italic font-bold">
-                        Pilotos
-                    </h2>
-                </div>
+        <div class="md:flex md:flex-wrap md:p-4 p-2 text-white space-y-16 md:space-y-0
+         md:space-x-8 md:max-w-screen-xl md:m-auto">
+            <div>
                 <StandingsListComponent :standings="standings"></StandingsListComponent>
             </div>
-
-            <div class="space-y-8">
-                <div class="flex space-x-4">
-                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/maintenance.png" />
-                    <h2 class="text-xl italic font-bold">
-                        Construtores
-                    </h2>
-                </div>
+            <div>
                 <ConstructorsListComponent :constructors="constructorStandings"> </ConstructorsListComponent>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="space-y-8">
+    <div class="space-y-8 bg-neutral-800 p-4 rounded-md max-w-lg shadow">
         <div class="flex space-x-4">
             <img src="https://img.icons8.com/ios-glyphs/30/ffffff/leaderboard.png" />
             <h2 class="text-xl font-bold italic">

@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen text-white">
+  <div class="text-white">
     <HeaderComponent></HeaderComponent>
-    <div class="p-4 space-y-4 sm:w-4/5 sm:mx-auto">
+    <div class="min-h-screen md:p-4 p-2 space-y-4 md:max-w-screen-xl md:mx-auto">
       <ResultsList :races="races"></ResultsList>
     </div>
   </div>
