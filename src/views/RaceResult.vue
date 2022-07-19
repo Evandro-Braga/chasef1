@@ -1,7 +1,7 @@
 <template>
-    <div class="text-white min-h-screen">
+    <div class="text-white">
         <HeaderComponent></HeaderComponent>
-        <div class="md:p-4 p-2 space-y-8 md:max-w-screen-xl md:mx-auto">
+        <div class="min-h-screen md:p-4 p-2 space-y-8 md:max-w-screen-xl md:mx-auto">
             <div class="flex space-x-4">
                 <img src="https://img.icons8.com/ios-glyphs/30/ffffff/finish-flag.png" />
                 <h2 class="text-2xl font-bold italic">

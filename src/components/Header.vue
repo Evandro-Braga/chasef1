@@ -4,7 +4,8 @@
             <router-link to="/"> Chase F1 </router-link>
         </h1>
 
-        <span class="absolute md:hidden right-6 top-1.5 cursor-pointer text-white text-4xl" @click="menuOpen()">
+        <span class="absolute md:hidden right-6 top-1.5 cursor-pointer text-white text-4xl" 
+        @click="menuOpen()">
             <i :class="open ? 'bi bi-x' : 'bi bi-filter-left'"></i>
         </span>
 
@@ -38,6 +39,7 @@ export default {
     methods: {
         menuOpen: function() {
             this.open = !this.open
+            this.$emit('marginTop')
         }
     }
 }
