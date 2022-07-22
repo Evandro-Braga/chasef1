@@ -1,5 +1,6 @@
 <template>
-    <div class="bg-neutral-900 text-neutral-100 py-3.5 px-6 md:px-16 md:flex justify-between">
+    <div class="bg-neutral-900 text-neutral-100 py-3.5 px-6 justify-between
+    md:px-16 md:flex">
         <h1 class="text-red-600 text-2xl cursor-pointer italic font-bold">
             <router-link to="/"> Chase F1 </router-link>
         </h1>
@@ -9,8 +10,8 @@
             <i :class="open ? 'bi bi-x' : 'bi bi-filter-left'"></i>
         </span>
 
-        <ul class="md:flex md:items-center md:space-x-4 md:static absolute md:w-auto w-full
-        top-14 duration-300 ease-in p-8 md:p-0 bg-neutral-900"
+        <ul class="absolute w-full top-14 duration-300 ease-in p-8 bg-neutral-900
+        md:flex md:items-center md:space-x-4 md:static md:w-auto md:p-0"
         :class="open ? 'left-0' : 'left-[-100%]'">
             <li class="border-t border-inherit font-semibold md:border-none py-4 md:py-0 pl-8
              text-md md:text-md md:my-0" v-for="link in links" :key="link.name">

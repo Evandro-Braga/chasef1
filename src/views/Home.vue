@@ -6,11 +6,6 @@
       autoplay muted loop>
         <source src="@/videos/Intro-Formula-1.mp4" type="video/mp4">
       </video>
-      <router-link to="/schedule" class="absolute left-[38%] md:left-1/2 translate-x-[-50%] text-white 
-      font-extrabold text-2xl hover:text-red-600 hover:ease-in tracking-widest italic"
-      :class="marginTop ? 'top-[70%]' : 'top-1/3'">
-        VER CALENDARIO 2022
-      </router-link>
     </div>
   </div>
 </template>
