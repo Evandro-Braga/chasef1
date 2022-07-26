@@ -12,23 +12,23 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/results',
-    name: 'results',
+    path: '/resultados',
+    name: 'resultados',
     component: ResultsView
   },
   {
-    path: '/standings',
-    name: 'standings',
+    path: '/classificaçao',
+    name: 'classificaçao',
     component: StandingsView
   },
   {
-    path: '/schedule',
-    name: 'schedule',
+    path: '/calendario',
+    name: 'calendario',
     component: ScheduleView
   },
   {
-    path: '/result/:id',
-    name: 'result',
+    path: '/resultado/:id',
+    name: 'resultado',
     component: RaceResultView
   }
 ]

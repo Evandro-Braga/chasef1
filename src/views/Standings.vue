@@ -1,8 +1,9 @@
 <template>
     <div>
         <HeaderComponent></HeaderComponent>
-        <div class="min-h-screen md:flex md:flex-wrap md:p-4 p-2 text-white space-y-16 md:space-y-0
-         md:space-x-8 md:max-w-screen-xl md:m-auto">
+        <div class="min-h-screen px-1 py-6 text-white space-y-16
+        md:max-w-screen-xl md:m-auto md:px-4 md:py-10 md:flex-wrap md:flex
+        lg:space-x-8 lg:space-y-0">
             <div>
                 <StandingsListComponent :standings="standings"></StandingsListComponent>
             </div>

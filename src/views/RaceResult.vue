@@ -1,7 +1,8 @@
 <template>
     <div class="text-white">
         <HeaderComponent></HeaderComponent>
-        <div class="min-h-screen md:p-4 p-2 space-y-8 md:max-w-screen-xl md:mx-auto">
+        <div class="min-h-screen space-y-8 px-1 py-6
+        md:max-w-screen-xl md:mx-auto md:px-4 md:py-10">
             <div class="flex space-x-4">
                 <img src="https://img.icons8.com/ios-glyphs/30/ffffff/finish-flag.png" />
                 <h2 class="text-2xl font-bold italic">
@@ -9,7 +10,9 @@
                 </h2>
             </div>
 
-            <div class="space-y-16 md:space-y-0 md:space-x-8 md:flex md:flex-wrap">
+            <div class="space-y-16
+            md:flex md:flex-wrap
+            lg:space-x-8 lg:space-y-0">
                 <div>
                     <RaceResult :results="results"></RaceResult>
                 </div>

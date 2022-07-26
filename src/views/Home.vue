@@ -1,11 +1,12 @@
 <template>
   <div>
-    <HeaderComponent @marginTop="marginTopFunction"></HeaderComponent>
     <div class="min-h-screen">
-      <video class="object-cover absolute h-[100vh] w-[100%]" :class="marginTop ? 'top-[270px]' : 'top-14'" 
+      <video class="object-cover absolute h-[110vh] w-[100%] top-14" 
+      :class="opacity ? 'opacity-25' : 'opacity-100'"
       autoplay muted loop>
         <source src="@/videos/Intro-Formula-1.mp4" type="video/mp4">
       </video>
+      <HeaderComponent @opacity="handleOpacity"></HeaderComponent>
     </div>
   </div>
 </template>
@@ -18,15 +19,15 @@ export default {
 
   data() {
     return{
-      marginTop: false
+      opacity: false
     }
   },
 
   components: { HeaderComponent },
 
   methods: {
-    marginTopFunction() {
-      this.marginTop = !this.marginTop
+    handleOpacity() {
+      this.opacity = !this.opacity
     }
   }
 }

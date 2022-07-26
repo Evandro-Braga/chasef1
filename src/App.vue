@@ -1,10 +1,10 @@
 <template>
-  <router-view class="bg-neutral-900"/>
+  <router-view class="bg-neutral-900" />
 </template>
 
 <script>
 export default {
-  name: 'app',
+    name: "app",
 }
 </script>
 

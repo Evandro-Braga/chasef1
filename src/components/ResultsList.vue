@@ -8,7 +8,7 @@
         </div>
         <div class="space-y-2">
             <p v-for="race in races" :key="race.round">
-                {{race.raceName}} - <a class="text-blue-300 italic" :href="'result/' + race.round"> Resultado </a>
+                {{race.raceName}} - <a class="text-blue-300 italic" :href="'resultado/' + race.round"> Resultado </a>
             </p>
         </div>
     </div>

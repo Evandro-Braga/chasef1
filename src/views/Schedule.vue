@@ -1,7 +1,8 @@
 <template>
     <div>
         <HeaderComponent></HeaderComponent>
-        <div class="min-h-screen text-white w-full md:p-4 p-2 md:max-w-screen-xl md:m-auto">
+        <div class="min-h-screen text-white w-full px-1 py-6
+        md:max-w-screen-xl md:m-auto md:px-4 md:py-10">
             <ScheduleList :schedule="schedule"></ScheduleList>
         </div>
     </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-neutral-900 text-neutral-100 py-3.5 px-6 justify-between
+    <div class="bg-neutral-800 text-neutral-100 py-3.5 px-6 justify-between
     md:px-16 md:flex">
         <h1 class="text-red-600 text-2xl cursor-pointer italic font-bold">
             <router-link to="/"> Chase F1 </router-link>
@@ -10,7 +10,7 @@
             <i :class="open ? 'bi bi-x' : 'bi bi-filter-left'"></i>
         </span>
 
-        <ul class="absolute w-full top-14 duration-300 ease-in p-8 bg-neutral-900
+        <ul class="absolute w-full top-14 duration-300 ease-in p-8 bg-neutral-800
         md:flex md:items-center md:space-x-4 md:static md:w-auto md:p-0"
         :class="open ? 'left-0' : 'left-[-100%]'">
             <li class="border-t border-inherit font-semibold md:border-none py-4 md:py-0 pl-8
@@ -28,9 +28,9 @@ export default {
     data() {
         return {
             links: [
-                {name: "Calendario", link: "schedule"},
-                {name: "Classificação", link: "standings"},
-                {name: "Resultados", link: "results"}
+                {name: "Calendario", link: "calendario"},
+                {name: "Classificação", link: "classificaçao"},
+                {name: "Resultados", link: "resultados"}
                 ],
 
             open: false
@@ -40,7 +40,7 @@ export default {
     methods: {
         menuOpen: function() {
             this.open = !this.open
-            this.$emit('marginTop')
+            this.$emit('opacity')
         }
     }
 }

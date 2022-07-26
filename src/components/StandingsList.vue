@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 bg-neutral-800 rounded-md max-w-lg md:min-w-lg space-y-8 shadow">
+    <div class="p-4 bg-neutral-800 rounded-md max-w-lg md:min-w-[512px] space-y-8 shadow">
         <div class="flex space-x-4">
             <img src="https://img.icons8.com/ios-glyphs/30/ffffff/motorbike-helmet.png" />
             <h2 class="text-xl italic font-bold">

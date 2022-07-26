@@ -1,7 +1,8 @@
 <template>
   <div class="text-white">
     <HeaderComponent></HeaderComponent>
-    <div class="min-h-screen md:p-4 p-2 space-y-4 md:max-w-screen-xl md:mx-auto">
+    <div class="min-h-screen space-y-4 px-1 py-6
+    md:max-w-screen-xl md:mx-auto md:px-4 md:py-10">
       <ResultsList :races="races"></ResultsList>
     </div>
   </div>
