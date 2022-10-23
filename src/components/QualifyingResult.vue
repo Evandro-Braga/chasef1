@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 bg-neutral-800 rounded-md max-w-lg md:min-w-[512px] space-y-8 shadow">
+    <div class="p-4 bg-white rounded-sm max-w-lg md:min-w-[512px] shadow-md m-auto">
         <div>
             <h2 class="font-bold text-xl italic">
                 Qualificação

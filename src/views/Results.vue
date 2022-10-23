@@ -1,22 +1,19 @@
 <template>
-  <div>
-    <HeaderComponent></HeaderComponent>
-    <div class="min-h-screen space-y-4 px-1 py-6 text-white
-    md:max-w-screen-xl md:mx-auto md:px-4 md:py-10">
+  <div class="min-h-screen max-w-screen-xl m-auto p-2 py-20">
+    <div>
       <ResultsList :races="races"></ResultsList>
     </div>
   </div>
 </template>
 
 <script>
-import HeaderComponent from '@/components/Header.vue';
 import api from '@/services/api.js';
 import ResultsList from '@/components/ResultsList.vue';
 
 export default {
   name: "ResultsView",
 
-  components: { HeaderComponent, ResultsList },
+  components: { ResultsList },
 
   data() {
     return {

@@ -1,10 +1,16 @@
 <template>
-  <router-view class="bg-neutral-900" />
+  <div class="bg-neutral-50">
+    <Header></Header>
+    <router-view/>
+  </div>
 </template>
 
 <script>
+import Header from '@/components/Header.vue'
 export default {
-    name: "app",
+  name: "app",
+
+  components: { Header }
 }
 </script>
 
@@ -14,5 +20,9 @@ export default {
   padding: 0;
   text-decoration: none;
   font-family: 'PT Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>

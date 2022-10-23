@@ -1,9 +1,6 @@
 <template>
-    <div>
-        <HeaderComponent></HeaderComponent>
-        <div class="min-h-screen px-1 py-6 text-white space-y-16
-        md:max-w-screen-xl md:m-auto md:px-4 md:py-10 md:flex-wrap md:flex
-        lg:space-x-8 lg:space-y-0">
+    <div class="min-h-screen max-w-screen-xl m-auto py-20">
+        <div class="grid lg:grid-cols-2 space-y-16 lg:space-y-0">
             <div>
                 <StandingsListComponent :standings="standings"></StandingsListComponent>
             </div>
@@ -15,14 +12,13 @@
 </template>
 
 <script>
-import HeaderComponent from '@/components/Header.vue';
 import api from '@/services/api'
 import StandingsListComponent from '@/components/StandingsList.vue'
 import ConstructorsListComponent from '@/components/ConstructorsList.vue'
 
 export default {
     name: "StandingsView",
-    components: { HeaderComponent, StandingsListComponent, ConstructorsListComponent },
+    components: { StandingsListComponent, ConstructorsListComponent },
 
     data() {
         return {

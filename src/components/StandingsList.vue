@@ -1,14 +1,14 @@
 <template>
-    <div class="p-4 bg-neutral-800 rounded-md max-w-lg md:min-w-[512px] space-y-8 shadow">
+    <div class="max-w-lg bg-white p-4 rounded-sm shadow-md m-auto">
         <div class="flex space-x-4">
-            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/motorbike-helmet.png" />
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/motorbike-helmet.png" />
             <h2 class="text-xl italic font-bold">
                 Pilotos
             </h2>
         </div>
         <div>
-            <table class="text-white text-left w-full">
-                <tr>
+            <table class="w-full text-left">
+                <tr class="text-lg">
                     <th>
                         #
                     </th>

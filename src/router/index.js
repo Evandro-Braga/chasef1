@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/Home'
 import ResultsView from '@/views/Results'
 import StandingsView from '@/views/Standings'
 import ScheduleView from '@/views/Schedule'
@@ -9,7 +8,7 @@ const routes = [
   {
     path: '/',
     name: '/',
-    component: HomeView
+    component: ScheduleView
   },
   {
     path: '/resultados',

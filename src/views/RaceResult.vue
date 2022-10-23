@@ -1,18 +1,14 @@
 <template>
-    <div>
-        <HeaderComponent></HeaderComponent>
-        <div class="min-h-screen space-y-8 px-1 py-6 text-white
-        md:max-w-screen-xl md:mx-auto md:px-4 md:py-10">
-            <div class="flex space-x-4">
-                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/finish-flag.png" />
+    <div class="min-h-screen max-w-screen-xl m-auto py-20">
+        <div class="space-y-4 p-2">
+            <div class="flex space-x-4 pl-0 md:pl-16">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/finish-flag.png" />
                 <h2 class="text-2xl font-bold italic">
                     {{ raceName }}
                 </h2>
             </div>
 
-            <div class="space-y-16
-            md:flex md:flex-wrap
-            lg:space-x-8 lg:space-y-0">
+            <div class="grid lg:grid-cols-2 space-y-16 lg:space-y-0">
                 <div>
                     <RaceResult :results="results"></RaceResult>
                 </div>
@@ -27,14 +23,13 @@
 
 <script>
 import api from '@/services/api'
-import HeaderComponent from '@/components/Header.vue'
 import RaceResult from '@/components/RaceResult.vue'
 import QualifyingResult from '@/components/QualifyingResult.vue'
 
 export default {
     name: 'RaceResultView',
 
-    components: { HeaderComponent, RaceResult, QualifyingResult },
+    components: { RaceResult, QualifyingResult },
 
     data() {
         return {
